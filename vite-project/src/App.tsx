@@ -1,5 +1,4 @@
-import Header from './components/partials/Header'
-import Footer from './components/partials/Footer'
+import { BrowserRouter as Router, Routes, Route} from 'react-router-dom'
 import Login from './pages/login'
 import SignUp from './pages/signUp'
 import './App.css'
@@ -8,12 +7,12 @@ function App() {
 
 
   return (
-    <>
-      <Header />
-      <Login />
-      <SignUp />
-      <Footer />
-    </>
+  <Router>
+    <Routes>
+      <Route path='/SignUp' element={ <SignUp/>} />
+      <Route path='/Login' element={ <Login/>} />
+    </Routes>
+  </Router>
   )
 }
 

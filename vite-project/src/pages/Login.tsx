@@ -1,18 +1,17 @@
 
+import Header from '../components/partials/Header'
+import Footer from '../components/partials/Footer'
 import MessagingSvg from '../assets/messaging_.svg'
 
 export default function Login() {
   return (
-    <>
-        <div className="flex items-center justify-center h-screen">
-        <div className="container relative mx-auto max-w-screen-md p-6 border border-gray-100 bg-opacity-80 rounded-xl shadow-lg backdrop-blur-lg flex items-center">
-            {/* SVG on the right */}
-            <div className="mr-8">
+    <>  <Header />
+        <div className="flex items-center justify-center min-h-screen">
+        <div className="container relative mx-auto max-w-screen-md p-6 border border-gray-100 bg-opacity-80 rounded-xl shadow-lg backdrop-blur-lg  flex flex-col md:flex-row items-center">
+            <div className="md:mr-8 mb-4 md:mb-0">
                 <img src={MessagingSvg} className="w-52 h-52" alt="Messaging Icon" />
             </div>
-
-            {/* Inputs on the left */}
-            <div className="flex flex-col w-1/2 ml-8">
+            <div className="flex flex-col w-full md:w-1/2 ml-0 md:ml-8">
                 <h1 className="block text-lg font-new text-gray-800 m-8" >Welcome to Posts Login Page :</h1>
                 <div className="mb-4">
                     <label htmlFor="email" className="block text-sm font-new text-gray-600">Email : </label>
@@ -25,6 +24,7 @@ export default function Login() {
             </div>
         </div>
     </div>
+        <Footer />
     </>
 
   )
